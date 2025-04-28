@@ -1,0 +1,71 @@
+ion-content {
+  --background: #0d0d0d; /* fondo negro profundo */
+  padding-top: env(safe-area-inset-top);
+  font-family: 'Nunito', sans-serif !important;
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+  background-color: #1e1e2f; /* azul oscuro-grisáceo */
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 102, 204, 0.3); /* glow azul suave */
+}
+
+ion-card-title {
+  color: #3399ff; /* azul claro vibrante */
+  font-weight: bold;
+}
+
+.login-button {
+  margin-top: 20px;
+  --background: #0066cc; /* azul medio */
+  --color: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+  font-weight: bold;
+}
+
+ion-button[size="small"] {
+  --background: #003366; /* azul oscuro */
+  --color: #fff;
+  font-weight: bold;
+  --border-radius: 6px;
+  margin-top: 8px;
+}
+
+.error-text {
+  color: #ff4d4d; /* rojo fuerte solo para errores */
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-container ion-item {
+  --background: transparent;
+  --padding-start: 8px;
+  --inner-padding-end: 8px;
+  --highlight-color-focused: #3399ff; /* azul al enfocar */
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #3399ff;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2); /* sombra azul */
+}
+
+.login-container ion-input {
+  --color: #fff;
+  --placeholder-color: #ccc;
+  font-size: 16px;
+}

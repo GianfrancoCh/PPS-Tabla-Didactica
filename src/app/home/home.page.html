@@ -1,20 +1,72 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header-fix">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Tabla didáctica</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button 
+        *ngIf="user" 
+        size="small" 
+        color="close" 
+        (click)="logout()">
+        Cerrar sesión
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding content-with-safe-area">
+  <div *ngIf="!user" id="container">
+    <strong>BIENVENIDO</strong>
+    <p>Debes estar registrado para poder utilizar la app.</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button size="small" (click)="goToLogin()">Iniciar Sesión</ion-button>
+    <ion-button size="small" (click)="goToRegister()">Crear una Cuenta</ion-button>
   </div>
+
+  <ng-container *ngIf="user">
+    <div class="cards-container">
+      <div class="cards" *ngIf="selectedTheme">
+        <ion-button class="card ion-margin-bottom" [id]="card" *ngFor="let card of cardsElegidas" (click)="pressCard(card)"
+          [disabled]="!selectedLanguage">
+          <img [src]="'../../assets/cards/' + selectedTheme + '/' + card + '.png'">
+        </ion-button>
+      </div>
+    </div>
+  
+    <!-- Botones flotantes de idiomas -->
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <!-- Español -->
+      <ion-fab-button (click)="changeLanguage('es')">
+        <img src="assets/flags/sp.png" alt="Español" />
+      </ion-fab-button>
+  
+      <!-- Inglés -->
+      <ion-fab-button (click)="changeLanguage('en')">
+        <img src="assets/flags/uk.png" alt="Inglés" />
+      </ion-fab-button>
+  
+      <!-- Portugués -->
+      <ion-fab-button (click)="changeLanguage('pt')">
+        <img src="assets/flags/pt.png" alt="Portugués" />
+      </ion-fab-button>
+    </ion-fab>
+  
+    <!-- Botones flotantes de temas -->
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <!-- Colores -->
+      <ion-fab-button (click)="changeTheme('colors')">
+        <img src="assets/temas/colors.png" alt="Colores" />
+      </ion-fab-button>
+  
+      <!-- Números -->
+      <ion-fab-button (click)="changeTheme('numbers')">
+        <img src="assets/temas/numbers.png" alt="Números" />
+      </ion-fab-button>
+  
+      <!-- Animales -->
+      <ion-fab-button (click)="changeTheme('animals')">
+        <img src="assets/temas/animals.png" alt="Animales" />
+      </ion-fab-button>
+    </ion-fab>
+  </ng-container>
 </ion-content>
