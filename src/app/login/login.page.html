@@ -1,10 +1,9 @@
 <ion-header [translucent]="true" class="header-fix">
   <ion-toolbar>
-    <ion-title>Ingresar</ion-title>
+    <ion-title>Tabla Didáctica</ion-title>
     <ion-buttons slot="end">
-      <ion-button size="small" color="danger" (click)="volverAlHome()">
-        <ion-icon name="home-outline" slot="start"></ion-icon>
-        Volver Atrás
+      <ion-button class='boton-home' (click)="volverAlHome()">
+        Página Principal
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -22,7 +21,7 @@
           <ion-item>
             <ion-icon name="mail-outline" slot="start"></ion-icon>
             <ion-input
-              label="Correo Electrónico"	
+              label="Correo Electrónico"
               labelPlacement="floating"
               type="email"
               formControlName="email"
@@ -33,6 +32,7 @@
           <ion-item>
             <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
             <ion-input
+              class="input-password"
               label="Contraseña"
               labelPlacement="floating"
               type="password"
@@ -56,27 +56,45 @@
               <ion-button
                 size="small"
                 expand="block"
-                (click)="autocompletarLogin('gian@gmail.com')"
+                (click)="autocompletarLogin(1)"
               >
-                Cuenta 1
+                Admin
               </ion-button>
             </ion-col>
             <ion-col size="4">
               <ion-button
                 size="small"
                 expand="block"
-                (click)="autocompletarLogin('gian2@gmail.com')"
+                (click)="autocompletarLogin(2)"
               >
-                Cuenta 2
+                Invitado
               </ion-button>
             </ion-col>
             <ion-col size="4">
               <ion-button
                 size="small"
                 expand="block"
-                (click)="autocompletarLogin('gian3@gmail.com')"
+                (click)="autocompletarLogin(3)"
               >
-                Cuenta 3
+                Usuario
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button
+                size="small"
+                expand="block"
+                (click)="autocompletarLogin(4)"
+              >
+                Anonimo
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button
+                size="small"
+                expand="block"
+                (click)="autocompletarLogin(5)"
+              >
+                Tester
               </ion-button>
             </ion-col>
           </ion-row>

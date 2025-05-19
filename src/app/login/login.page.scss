@@ -1,3 +1,8 @@
+ion-toolbar {
+  --background: linear-gradient(to left, #1cffa0, #027c1f); 
+  margin-top: 14px;
+}
+
 ion-content {
   --background: #0d0d0d; /* fondo negro profundo */
   padding-top: env(safe-area-inset-top);
@@ -19,26 +24,26 @@ ion-content {
   padding: 16px;
   background-color: #1e1e2f; /* azul oscuro-grisáceo */
   border-radius: 12px;
-  box-shadow: 0 0 16px rgba(0, 102, 204, 0.3); /* glow azul suave */
+  box-shadow: 0 0 16px rgba(0, 126, 17, 0.3); /* glow azul suave */
 }
 
 ion-card-title {
-  color: #3399ff; /* azul claro vibrante */
+  color: #a0d403; /* azul claro vibrante */
   font-weight: bold;
 }
 
 .login-button {
   margin-top: 20px;
-  --background: #0066cc; /* azul medio */
+  --background: #008325; /* azul medio */
   --color: #fff;
   --border-radius: 8px;
-  --box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+  --box-shadow: 0 0 10px rgba(2, 179, 55, 0.651);
   font-weight: bold;
 }
 
 ion-button[size="small"] {
-  --background: #003366; /* azul oscuro */
-  --color: #fff;
+  --background: #00af92; /* azul oscuro */
+  --color: #231e1e;
   font-weight: bold;
   --border-radius: 6px;
   margin-top: 8px;
@@ -53,19 +58,57 @@ ion-button[size="small"] {
 
 .login-container ion-item {
   --background: transparent;
-  --padding-start: 8px;
-  --inner-padding-end: 8px;
-  --highlight-color-focused: #3399ff; /* azul al enfocar */
+  --padding-start: 2px;
+  --inner-padding-end: 2px;
+  --highlight-color-focused: #007623; /* azul al enfocar */
   --border-radius: 8px;
   --border-width: 1px;
   --border-style: solid;
-  --border-color: #3399ff;
+  --border-color: #33ff33;
   margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2); /* sombra azul */
+  box-shadow: 0 2px 8px rgba(1, 131, 22, 0.2); /* sombra azul */
 }
 
 .login-container ion-input {
   --color: #fff;
   --placeholder-color: #ccc;
+  font-size: 20px;
+}
+
+.ion-text-center {
+  text-align: center;
+  font-size: 32px;
+}
+.boton-ingreso-rapido {
+  width: 85px;
+  height: 50px;
+  border-radius: 100%;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Centrado horizontal */
+  color: white;
+  font-weight: bold;
+  font-family: 'lucida grande', sans-serif;
+}
+
+.boton-volver{
+  color: rgb(255, 255, 255);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold; 
+  background: #0d0d0d;
+}
+
+.boton-home{
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #363cf4;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
 }
